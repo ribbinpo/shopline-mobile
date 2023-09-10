@@ -1,6 +1,12 @@
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ViewStyle } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ViewStyle,
+  useColorScheme,
+} from "react-native";
 import {
   EdgeInsets,
   SafeAreaProvider,
@@ -10,9 +16,20 @@ import { fontConfig } from "./configs/fonts.config";
 
 function HomeScreen() {
   const insets = useSafeAreaInsets();
+  const colorScheme = useColorScheme();
+  const themeContainerStyle =
+    colorScheme === "light"
+      ? {
+          backgroundColor: "#d0d0c0",
+        }
+      : {
+          backgroundColor: "#242c40",
+        };
   return (
-    <View style={containerStyle(insets)}>
-      <Text style={{ fontFamily: 'Kanit-Regular' }}>Open up App.tsx to start working on your app!</Text>
+    <View style={[containerStyle(insets), themeContainerStyle]}>
+      <Text style={{ fontFamily: "Kanit-Regular" }}>
+        Open up App.tsx to start working on your app!
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -29,14 +46,5 @@ export default function App() {
 }
 
 const containerStyle = (insets: EdgeInsets): ViewStyle => {
-  return { flex: 1, paddingTop: insets.top  };
+  return { flex: 1, paddingTop: insets.top };
 };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-// });
