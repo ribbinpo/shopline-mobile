@@ -12,6 +12,7 @@
   "dependencies": {
     "@tamagui/babel-plugin": "^1.66.0",
     "@tamagui/config": "^1.66.0",
+    "@tamagui/font-inter": "^1.67.0",
     "@tamagui/lucide-icons": "^1.66.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "expo": "~49.0.8",

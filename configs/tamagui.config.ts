@@ -1,10 +1,16 @@
 import { config } from "@tamagui/config";
+import { Text, View } from 'react-native'
+import { createTamagui, setupReactNative } from "tamagui";
 
-import { createTamagui } from "tamagui";
+setupReactNative({
+  Text,
+  View,
+});
+
 const tamaguiConfig = createTamagui(config);
 // this makes typescript properly type everything based on the config
 
-type Conf = typeof tamaguiConfig;
+export type Conf = typeof tamaguiConfig;
 
 declare module "tamagui" {
   interface TamaguiCustomConfig extends Conf {}
