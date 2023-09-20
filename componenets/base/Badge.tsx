@@ -5,6 +5,7 @@ interface IBadge {
   textColor?: ColorValue;
   backgroundColor?: ColorValue;
   variant?: "default";
+  size?: "sm";
 }
 const variants = {
   default: {
@@ -13,7 +14,13 @@ const variants = {
   },
 };
 
-const Badge = ({ title, variant, backgroundColor, textColor }: IBadge) => {
+const sizes = {
+  sm: {
+    fontSize: 10
+  }
+}
+
+const Badge = ({ title, variant, backgroundColor, textColor, size }: IBadge) => {
   return (
     <View
       style={{
@@ -29,6 +36,7 @@ const Badge = ({ title, variant, backgroundColor, textColor }: IBadge) => {
           color: textColor
             ? textColor
             : variants[variant ? variant : "default"].textColor,
+          ...sizes[size ? size : "sm"],
         }}
       >
         {title}
@@ -38,9 +46,3 @@ const Badge = ({ title, variant, backgroundColor, textColor }: IBadge) => {
 };
 
 export { Badge };
-
-const style = StyleSheet.create({
-  container: {
-    borderRadius: 1,
-  },
-});
