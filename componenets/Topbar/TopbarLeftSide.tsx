@@ -1,7 +1,7 @@
-import { H1 } from "tamagui";
+import { Text } from "react-native";
 
 const TopbarLeftSide = () => {
-  return <H1 size="$6" color="black">Shopline</H1>;
+  return <Text>Shopline</Text>;
 };
 
 export default TopbarLeftSide;

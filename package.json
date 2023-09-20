@@ -10,10 +10,6 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@tamagui/babel-plugin": "^1.66.0",
-    "@tamagui/config": "^1.66.0",
-    "@tamagui/font-inter": "^1.67.0",
-    "@tamagui/lucide-icons": "^1.66.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "expo": "~49.0.8",
     "expo-asset": "~8.10.1",
@@ -29,8 +25,7 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-svg": "13.9.0",
-    "styled-components": "^6.0.8",
-    "tamagui": "^1.66.0"
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

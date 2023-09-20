@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { View, ViewStyle } from "react-native";
-import { Search, Bell } from "@tamagui/lucide-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 import IconButton from "../base/IconButton";
 
@@ -10,11 +10,11 @@ const TopbarRigthSide = () => {
     <View style={{ flexDirection: "row", gap: "12%" } as unknown as ViewStyle}>
       <IconButton
         onPress={() => router.push("/search")}
-        icon={<Search color="black" />}
+        icon={<Ionicons name="search" color="black" size={20} />}
       />
       <IconButton
         onPress={() => router.push("/notification")}
-        icon={<Bell color="black" />}
+        icon={<Ionicons name="notifications" color="black" size={20} />}
       />
     </View>
   );

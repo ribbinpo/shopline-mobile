@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import { useColorScheme } from "react-native";
-import { Home, User } from "@tamagui/lucide-icons";
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 import TopbarLeftSide from "../../componenets/Topbar/TopbarLeftSide";
 import TopbarRigthSide from "../../componenets/Topbar/TopbarRigthSide";
@@ -32,15 +32,15 @@ export default () => {
       <Tabs.Screen
         name="home"
         options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => <Home color={color} size={size} />,
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color, size }) => <Ionicons name="home" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="user"
         options={{
-          tabBarLabel: 'User',
-          tabBarIcon: ({ color, size }) => <User color={color} size={size} />,
+          tabBarLabel: "User",
+          tabBarIcon: ({ color, size }) => <Ionicons name="person" color={color} size={size} />,
         }}
       />
     </Tabs>
